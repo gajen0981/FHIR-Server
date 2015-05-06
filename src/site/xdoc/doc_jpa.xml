@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+	<properties>
+		<title>JPA Server - HAPI FHIR</title>
+		<author email="jamesagnew@users.sourceforge.net">James Agnew</author>
+	</properties>
+
+	<body>
+
+		<section name="JPA Server">
+
+			<p>
+				The HAPI FHIR 
+				<a href="./doc_rest_server.html">RestfulServer</a>
+				module can be used to create a FHIR server endpoint against an arbitrary
+				data source, which could be a database of your own design, an existing
+				clinical system, a set of files, or anything else you come up with.
+			</p>
+			<p>
+				HAPI also provides a persistence module which can be used to
+				provide a complete RESTful server implementation, backed by a database of
+				your choosing. This module uses the <a href="http://en.wikipedia.org/wiki/Java_Persistence_API">JPA 2.0</a>
+				API to store data in a database without depending on any specific database technology. 
+			</p>
+			<p>
+				<b>Important Note: </b>
+				This implementation uses a fairly simple table design, with a 
+				single table being used to hold resource bodies (which are stored as 
+				CLOBs, optionally GZipped to save space) and a set of tables to hold search indexes, tags, 
+				history details, etc. This design is only one of many possible ways
+				of designing a FHIR server so it is worth considering whether it
+				is appropriate for the problem you are trying to solve.
+			</p>
+
+			<subsection name="Getting Started">
+				
+				<p>
+					The easiest way to get started with HAPI's JPA server module is
+					to begin with the example project. There is a complete sample project 
+					found in our GitHub repo here: <a href="https://github.com/jamesagnew/hapi-fhir/tree/master/hapi-fhir-jpaserver-example">hapi-fhir-jpaserver-example</a>
+				</p>
+				
+				<p>
+					This example is a fully contained FHIR server, supporting all standard operations (read/create/delete/etc).
+					It bundles an embedded instance of the <a href="http://db.apache.org/derby/">Apache Derby</a> Java database
+					so that the server can run without depending on any external database, but it can also be
+					configured to use an installation of Oracle, Postgres, etc. 
+				</p>
+				
+				<p>
+					To take this project for a spin, check out the sources from GitHib (or download a snapshot),
+					and then build the project:
+				</p>
+				
+				<source><![CDATA[$ cd hapi-fhir-jpaserver-example
+$ mvn install]]></source>
+				
+				<p>
+					You now have two options for starting the server:
+				</p>
+				<ul>
+					<li>
+						<b>Deploy to Tomcat/JBoss/Websphere/etc: </b> You will now have a file 
+						in your <code>target</code> directory called <code>hapi-fhir-jpaserver-example.war</code>.
+						This WAR file can be deployed to any Servlet container, at which point you could
+						access the server by pointing your browser at a URL similar to the following 
+						(you may need to adjust the 
+						port depending on which port your container is configured to listen on):
+						<a href="http://localhost:8080/hapi-fhir-jpaserver-example/">http://localhost:8080/hapi-fhir-jpaserver-example/</a> 
+					</li>
+					<li>
+						<b>Run with Maven and Embedded Jetty: </b> To start the server
+						directly within Maven, you can execute the following command:<br/>
+						<source>$ mvn jetty:run</source>
+						You can then access the server by pointing your browser at the following URL: 
+						<a href="http://localhost:8080/hapi-fhir-jpaserver-example/">http://localhost:8080/hapi-fhir-jpaserver-example/</a> 
+					</li>
+				</ul>
+			</subsection>
+		</section>
+		
+		<section name="Architecture">
+		
+			<img src="images/jpa_architecture.png" alt="Architecture" align="right"/>
+			
+			<p>
+				The HAPI JPA Server has the following components:
+			</p>
+			
+			<ul>
+				<li>
+					<b>Resource Providers: </b>
+					A RESTful server <a href="./doc_rest_server.html#resource_providers">Resource Provider</a> is
+					provided for each resource type in a given release of FHIR. Each resource provider implements
+					a 
+					<a href="./apidocs/ca/uhn/fhir/rest/annotation/Search.html">@Search</a> 
+					method implementing the complete set of search parameters defined in the FHIR
+					specification for the given resource type.<br/><br/>
+					The resource providers also extend a superclass which implements all of the
+					other FHIR methods, such as Read, Create, Delete, etc.<br/><br/>
+					Note that these resource providers are generated as a part of the HAPI build process, 
+					so they are not checked into Git. You can see their source 
+					in the <a href="./xref-jpaserver/">JXR Report</a>,
+					for example the
+					<a href="./xref-jpaserver/ca/uhn/fhir/jpa/rp/dstu2/PatientResourceProvider.html">PatientResourceProvider</a>.
+					<br/><br/>
+					The resource providers do not actually implement any of the logic
+					in searching, updating, etc. They simply receive the incoming HTTP calls (via the RestfulServer)
+					and pass along the incoming requests to the DAOs.
+					<br/><br/>
+				</li>
+				<li>
+					<b>HAPI DAOs: </b>
+					The DAOs actually implement all of the database business logic relating to 
+					the storage, indexing, and retrieval of FHIR resources, using the underlying JPA
+					API.
+					<br/><br/>
+				</li> 
+				<li>
+					<b>Hibernate: </b>
+					The HAPI JPA Server uses the JPA library, implemented by Hibernate. No Hibernate
+					specific features are used, so the library should also work with other
+					providers (e.g. Eclipselink) but it is not tested regularly with them.
+					<br/><br/>
+				</li> 
+				<li>
+					<b>Database: </b>
+					The RESTful server uses an embedded Derby database, but can be configured to
+					talk to 
+					<a href="https://developer.jboss.org/wiki/SupportedDatabases2?_sscc=t">any database supported by Hibernate</a>.
+				</li> 
+			    
+			</ul>
+			
+		</section>
+		
+		<section name="Configuring The JPA Server">
+			
+			<p>
+				The JPA server is configured through a series of configuration files, most
+				of which are documented inline. 
+			</p>
+			<ul>
+				<li>
+					<a href="https://github.com/jamesagnew/hapi-fhir/blob/master/hapi-fhir-jpaserver-example/src/main/webapp/WEB-INF/hapi-fhir-server-database-config.xml"><b>hapi-fhir-server-database-config.xml</b></a>:
+					Configures the database connection settings 
+				</li>
+			</ul>
+		</section>
+		
+		<section name="Not yet complete">
+			<p>
+				The documentation for the JPA server is not yet complete. Please get in touch
+				if you are able to help us complete it!
+			</p>
+		</section>
+		
+	</body>
+
+</document>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+	<properties>
+		<title>The Open Source HL7 API for Java</title>
+		<author email="jamesagnew@users.sourceforge.net">James Agnew</author>
+	</properties>
+
+	<body>
+
+		<!-- The body of the document contains a number of sections -->
+		<section name="Welcome">
+			<p>
+			    SOCIALPLUGINSHEREFHIR
+			</p>
+			<p>
+				This is the homepage for the HAPI-FHIR library. We are developing 
+				an open-source implementation of the FHIR specification in Java.
+				<a href="http://hl7.org/implement/standards/fhir/">FHIR</a>
+				(Fast Healthcare Interoperable Resources)
+				is a specification for exchanging healthcare data in a modern
+				and developer friendly way.
+			</p>
+			
+			<p>
+				Note that this is the home for the FHIR version of HAPI. If you are 
+				looking for HL7 v2 support, <a href="http://hl7api.sourceforge.net">click here</a>.
+			</p>
+			
+			<subsection name="Demonstration/Test Page">
+			
+				<p>
+					A public test server is now operating at
+					<a href="http://fhirtest.uhn.ca">http://fhirtest.uhn.ca</a>. 
+					This server is built entirely using components of HAPI-FHIR
+					and demonstrates all of its capabilities. This server is also
+					entirely open source. You can host your own copy by 
+					following instructions on our 
+					<a href="./doc_jpa.html">JPA Server</a> 
+					documentation.
+				</p>
+				
+			</subsection>
+			
+		</section>
+
+		<section name="Announcements">
+
+			<p>
+				<b>March 14, 2015 - HAPI FHIR 0.9 Released</b> - HAPI 0.9 has now been released. This 
+				release is an important one. It brings a number of fixes and new features, and most importantly
+				brings suport for DSTU2 resources and parsing/encoding. DSTU2 is the upcoming next version
+				of the FHIR specification itself. Also of particular note, the 
+				<a href="./doc_jpa.html">JPA Server</a> has graduated to being included in the
+				Maven repos (so you can create your own server which works just like <a href="http://fhirtest.uhn.ca">ours</a>).
+				The <a href="./doc_android.html">Android JAR</a> has also been included.
+			</p>
+			<p>
+				As always, you can see the complete list of what has
+				changed by consulting the <a href="./changes-report.html">changelog</a>, and the
+				<a href="./download.html">download page</a> has information on where to get it.
+			</p>
+			<p>
+				<b>Note on DSTU2:</b> It is important to note that DSTU2 is not yet formally ballotted by HL7, and as such it 
+				is subject to change. A number of developers are starting to target it however, so support
+				was important to us at HAPI HQ. See the <a href="./doc_dstu2.html">HAPI DSTU2 page</a>
+				for information about how to add support for FHIR DSTU2 in your applications.
+			</p>
+			<p>
+				<b>What's Next:</b> We are planning on making the next release of HAPI be the 1.0 release.
+				The biggest development on our plate for the next development cycle will be to finish
+				the integration of the HL7.org structure classes. Some people may have noticed a project
+				in our GitHub repo called "hapi-fhir-structures-hl7org" that isn't a part of the current build.
+				What we are trying to do is to unify the HL7.org Java Reference Implementation data model with
+				the HAPI one in a single set of classes. This will mean that HAPI users can take advantage
+				of tools from the RI (such as the excellent validator that comes with it) and users of the
+				RI can take advantage of HAPI's client and server toolkits. It is still not 100% clear what
+				this integration will look like when it is complete, but that should become clear in the 
+				coming weeks.
+			</p>
+			<p>
+				As always, thanks to everyone who contributed code, pull requests, and filed bugs to make
+				this release better. HAPI FHIR is the collective work of a large number of people now
+				and we all benefit from the collective hard work being put in from around the world!
+			</p>
+			<p>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+			
+			<!-- 
+			<p>
+				<b>Dec 17, 2014 - HAPI FHIR 0.8 Released</b> - HAPI 0.8 has been released!
+				As always, thanks to everyone who contributed on this; this release includes
+				a lot of bug fixes and new features from around the world.
+			</p>
+			<p>
+				See the <a href="http://jamesagnew.github.io/hapi-fhir/changes-report.html">changelog</a>
+				for a complete list of what's new!
+			</p>
+			<p>
+				In particular, this release marks the beginning of our push to separate the model
+				classes (e.g. Patient, Encounter, etc.) from the core API, so that you can use any 
+				version of the structures you want in your application, or even combine versions if 
+				you need to. As is the case with HAPI's HL7 v2 library, you now need to include at least
+				one new separate "structures" JAR with your application as of HAPI-FHIR 0.8. See the
+				<a href="http://jamesagnew.github.io/hapi-fhir/doc_upgrading.html">Upgrading</a>
+				and
+				<a href="http://jamesagnew.github.io/hapi-fhir/download.html">Download</a>
+				pages for more information.
+			</p>
+			<p>
+				With the newly separated "structures" dependencies, we have also introduced
+				a separate "dev" version of the structures, which contains the current development
+				structure definitions, which are now close to being in their final DSTU2 state 
+				(DSTU2 should be released in mid 2015 by HL7 although the date is not yet finalized).
+				DSTU2 contains a number of new and updated resource definitions, but it also makes
+				several infrastructure changes including a new Bundle format and a new encoding style
+				for extensions in JSON. These changes are not yet supported in HAPI-FHIR 0.8, but
+				will be included in HAPI-FHIR 0.9. We expect to deploy a working snapshot build of
+				HAPI-FHIR 0.9 within the next day or so, including all of these changes.
+			</p>
+			<p>
+				One further note: We are currently working with Grahame Grieve on an initiative
+				to harmonize HAPI's model objects with the FHIR Java Reference Implementation. This
+				means that developers should in the future be able to use either the HAPI built-in
+				resource definitions or the ones shipped by HL7. The advantage to this is that
+				it will allow users of HAPI's API to take advantage of other tooling produced
+				by HL7 (such as profile validators). Please get in touch (either by email or
+				on the Google Group) if you would like to help test this. 
+			</p>
+			<p>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+
+			<p>
+				<b>Oct 23, 2014 - HAPI FHIR 0.7 Released</b> - HAPI 0.7 has been released!
+				This release contains a number of contributions and bugfixes from all over
+				the FHIR community. Thanks to everyone who contributed!
+			</p>
+			<p>
+				In particular, note that this release corrects an issue where contained resources 
+				sometimes got encoded as both contained and top-level resources, and top level 
+				resources sometimes got encoded as contained resources. It is possible that some 
+				existing applications depended on the buggy behaviour, so please do a bit of extra 
+				testing on your server applications if you use contained resources at all. See 
+				the <a href="http://jamesagnew.github.io/hapi-fhir/doc_resource_references.html">resource references</a>
+				documentation for a bit more information on how these work, and please feel free to 
+				post to the <a href="https://groups.google.com/d/forum/hapi-fhir">google group</a>
+				if things aren't working as expected.
+			</p>
+			<p>
+				This release also introduces a fascinating <a href="https://www.vagrantup.com/">Vagrant</a>
+				based development environment contributed by Preston Lee which should allow you 
+				to try out a fully functional, database backed HAPI server in a virtual server 
+				on your own development box.
+			</p>
+			<p>
+				See the <a href="http://jamesagnew.github.io/hapi-fhir/changes-report.html">changelog</a>
+				for a complete list of what's new!
+				<br/>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+
+			<p>
+				<b>Sep 8, 2014 - HAPI FHIR 0.6 Released</b> - A new build has been uploaded,
+				containing a number of new features and bug fixes. See the changelog
+				for a complete list of what has changed. 
+				<br/>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+
+			<p>
+				<b>July 30, 2014 - HAPI FHIR 0.5 Released</b> - HAPI 0.5 has now been released.
+				This is surprisingly soon after the last release (and probably not a 
+				pace we will sustain) but we landed a number of big fixes and enhancements
+				over the last two weeks and it just didn't make sense to hold them.
+				See the <a href="./doc_upgrading.html">upgrading page</a> for information on 
+				API changes in this release.
+				<br/>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+		
+			<p>
+				<b>July 14, 2014 - HAPI FHIR 0.4 Released</b> - The next release of HAPI has been
+				tagged an uploaded to the Maven global repos and the GitHub releases section. See the changelog
+				for more information. This release contains a large number of minor bugfixes and quite a few new
+				features. Upgrading should be relatively simple, although there is one breaking API change (IdDt
+				now can contain the complete URL of a resource, not just the logical ID).
+				<br/>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+
+			<p>
+				<b>May 12, 2014 - HAPI FHIR 0.3 Released</b> - A new release of HAPI FHIR has been deployed
+				to the Maven repos and the Sourceforge download system. This release corrects a large number of 
+				bugs and includes fixes which were implemented in the recent FHIR Connectathon.
+				<br/>
+				- <a href="mailto:jamesagnew@users.sourceforge.net">James Agnew</a>
+			</p>
+ 			-->
+		</section>
+
+		<section name="What is HAPI FHIR?">
+			<p>
+				HAPI FHIR is a simple-but-powerful library for adding FHIR messaging to your application. It
+				is pure Java (1.6+ compatible), and licensed under the business-friendly Apache Software
+				License, version 2.0.
+			</p>
+			
+			<subsection name="Some Ways You Can Use HAPI FHIR">
+				<p>
+					HAPI is designed with one main intent: providing a flexible way of adding
+					FHIR capability to applications. We at <a href="http://www.uhn.ca">University Health Network</a> 
+					developed HAPI-FHIR to allow us to 
+					build up our own unified FHIR RESTful server which exposes data backed by
+					a number of systems and repositories, so it is designed to be flexible
+					above all else. 
+				</p>
+				<p>
+					The library is designed to support several main usage patterns:
+					<br/>
+					<object data="svg/hapi_usage_patterns.svg" width="672" height="468" type="image/svg+xml"></object>
+				</p>
+			</subsection>
+						
+			<subsection name="Fluent Interface">
+			
+				<p>
+					The HAPI API is designed to allow interaction with 
+					FHIR model objects using a convenient
+					<a href="http://en.wikipedia.org/wiki/Fluent_interface">Fluent Interface</a>.
+				</p>
+				<source><![CDATA[Patient patient = new Patient();
+patient.addIdentifier().setUse(OFFICIAL).setSystem("urn:fake:mrns").setValue("7000135");
+patient.addIdentifier().setUse(SECONDARY).setSystem("urn:fake:otherids").setValue("3287486");
+
+patient.addName().addFamily("Smith").addGiven("John").addGiven("Q").addSuffix("Junior");
+
+patient.setGender(AdministrativeGenderCodesEnum.M);]]></source>
+
+			</subsection>
+			<subsection name="Encoding Support">
+						
+				<p>
+					Both XML and JSON encoding are suported natively using a simple API
+					to pick between them. XML support is built on top of the lightning-fast 
+					<a href="http://docs.oracle.com/javase/tutorial/jaxp/stax/why.html">STaX/JSR 173</a> 
+					API, and JSON support is provided using the new
+					<a href="https://jcp.org/en/jsr/detail?id=353">javax.json/JSR-353</a> API. 
+				</p>
+	
+				<source><![CDATA[FhirContext ctx = new FhirContext();
+String xmlEncoded = ctx.newXmlParser().encodeResourceToString(patient);
+String jsonEncoded = ctx.newJsonParser().encodeResourceToString(patient);
+]]></source>
+
+			</subsection>
+			<subsection name="Easy RESTful Client and Servers">
+
+				<p>
+					Creating clients is simple and uses an annotation based format
+					that will be familiar to users of JAX-WS.
+				</p>
+				
+				<source><![CDATA[public interface MyClientInterface extends IRestfulClient
+{
+  /** A FHIR search */
+  @Search
+  public List<Patient> findPatientsByIdentifier(@RequiredParam(name="identifier") IdentifierDt theIdentifier);
+	
+  /** A FHIR create */
+  @Create
+  public MethodOutcome createPatient(@ResourceParam Patient thePatient);
+}]]></source>
+
+				<p>
+					Using this client is as simple as:
+				</p>
+				
+				<source><![CDATA[MyClientInterface client = ctx.newRestfulClient(MyClientInterface.class, "http://foo/fhir");
+IdentifierDt searchParam = new IdentifierDt("urn:someidentifiers", "7000135");
+List<Patient> clients = client.findPatientsByIdentifier(searchParam);]]></source>
+
+			</subsection>
+		</section>
+
+	</body>
+
+</document>
