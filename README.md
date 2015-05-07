@@ -1,10 +1,9 @@
 
 # FHIR-Server
 =============
-This is the HAPI based FHIR server with Blue Button 2.0 capabilities that is fine tuned for enterprise scalability with RDBMS on a JBoss Application Server. This technology stack is JavaEE with SpringMVC. 
+This is the HAPI based FHIR server with Blue Button 2.0 capabilities that is tuned for enterprise scalability with RDBMS with JBoss Application Server. This technology stack on JavaEE with SpringMVC. 
 
-Documentation is coming...
-
+Documentation is still in progress and it's in DRAFT format.
 
 WHY
 ---
