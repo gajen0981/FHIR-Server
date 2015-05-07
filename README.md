@@ -20,17 +20,15 @@ Download the healthcare data as FHIR JSON or FHIR XML format.
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2Download.png)
 
-
 ### Blue Button 2.0 capabilities
 Untethered PHR and patient download and share the data with heatlhcare providers. 
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
+### PHR Example Use Case - Patient imports FHIR files from multiple health systems and take control of their health
+Untethered PHR and patient able download, take control of their health, share the data with heatlhcare providers and donate the data for research & science (or Precision Medicine Initiates).
 
-### PHR import and v
-Untethered PHR and patient download and share the data with heatlhcare providers. 
-
-![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR.png)
 
 DIRECTORY STRUCTURE
 -------------------
