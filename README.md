@@ -25,9 +25,13 @@ Untethered PHR and patient download and share the data with heatlhcare providers
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
-### PHR Example Use Case - Patient imports FHIR files from multiple health systems and take control of their health
-Untethered PHR and patient able download, take control of their health, share the data with heatlhcare providers and donate the data for research & science (or Precision Medicine Initiates).
+### Example Personal Healh Record Use Case
+Untethered Personal Health Repository - Patient imports FHIR files from multiple health systems.
+Rich Health Meaningful Info - With visually appealing mobile app, patients able to take control of their health and empower it. 
+Share and Proxy Access - Share the data with other heatlhcare providers and give and authorize 3rd party applications to get access to their data. 
+Donate for Research & Science - Donate the data for research & science (or Precision Medicine Initiates).
 
+End point app is in the early stages of developments. 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR.png)
 
 DIRECTORY STRUCTURE
@@ -149,3 +153,8 @@ Build the application using the following order of packages and then deploy the 
 Thanks
 ------
 Thanks to HAPI Team and UHN folks especially James Agnew. 
+
+
+Author
+------
+Contact Gajen Sunthara => gajen.sunthara@post.harvard.edu
