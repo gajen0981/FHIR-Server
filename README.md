@@ -152,9 +152,9 @@ Build the application using the following order of packages and then deploy the 
 
 Thanks
 ------
-Thanks to HAPI Team and UHN folks especially James Agnew. 
+Thanks to HAPI Team and UHN folks especially James Agnew
 
 
-Author
-------
-Contact Gajen Sunthara => gajen.sunthara@post.harvard.edu
+Contact
+--------
+Gajen Sunthara => gajen.sunthara@post.harvard.edu
