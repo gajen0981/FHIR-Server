@@ -5,6 +5,17 @@ This is the HAPI based FHIR server with Blue Button 2.0 capabilities that is fin
 
 Documentation is coming...
 
+WHY
+---
+Healthcare Interoperability using HL7's FHIR standards via HTTPS transport (RESTful API)
+
+WHAT
+----
+HAPI based FHIR server with Blue Button 2.0 capabilities. 
+
+### Examples of RESTful Open API's
+![alt tag](https://github.com/gajen0981/CHPL-OpenAPI/blob/master/docs/1.png)
+
 
 DIRECTORY STRUCTURE
 -------------------
