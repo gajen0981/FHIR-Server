@@ -5,9 +5,11 @@ This is the HAPI based FHIR server with Blue Button 2.0 capabilities that is fin
 
 Documentation is coming...
 
+
 WHY
 ---
 Healthcare Interoperability using HL7's FHIR standards over HTTPS transport (RESTful API).
+
 
 WHAT
 ----
@@ -16,6 +18,7 @@ HAPI based FHIR server with Blue Button 2.0 capabilities. Able to download the f
 ### Blue Button 2.0 capabilities
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/rdbms.png)
 
+
 DIRECTORY STRUCTURE
 -------------------
       hapi-fhir-base/                              Base code
@@ -23,24 +26,29 @@ DIRECTORY STRUCTURE
       hapi-fhir-structures-dstu*/                  HL7's FHIR specs in Draft Standard Trial Use (DSTU)
       hapi-tinder-plugin/                          HL7's FHIR specs raw schema
 
+
 REQUIREMENTS
 ------------
 - Java 1.7.x
+- SpringMVC Framework 4.1.x
 - JBoss EAP 6.3.x
 - Any RDBMS (MySQL, Oracle, PostgreSQL etc...) 
 
-INSTALLATION
-------------
+
+CONFIGURATION
+-------------
 Check it out from GitHub and compile using Maven package dependency manager. 
 
 ### Modify the Maven POM file to include RDBMS connector library
 Include the MySQL (or any RDBMS) 
+
       hapi-fhir-jpaserver-uhnfhirtest->pom.xml
       
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/rdbms.png)
 
 ### Database Configuration
 DB Connection configuration with DB credentials and create a database name "fhir".
+
       hapi-fhir-jpaserver-uhnfhirtest -> src -> main -> webapp -> WEB-INF -> hapi-fhir-tester-config.xml
       
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/dbConnectionConfig.png)
@@ -85,39 +93,48 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 ```
 
 ### Modify SpringMVC persistence configuration
-Include the MySQL (or any RDBMS) 
+To choose the database type and version dialect.
+
       hapi-fhir-jpaserver-uhnfhirtest -> src -> main -> resources -> META-INF -> fhirtest-persistence.xml
       
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/persistence.png)
 
+Configuration XML
 ```xml
 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
 ```
 
+### Add JBoss application server system properties for the local server base URL
+Important if you want to connect the FHIR server to its local DB 
 
-Application can be access via the following URI
-http://localhost/basic/web/
+      JBoss EAP -> standalone -> configuration -> standalone.xml
+      
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/jbossConfig.png)
 
-
-CONFIGURATION
--------------
-
-### Database
-
-Edit the file `config/db.java` with real database configurations, for example:
-
-```java
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=chpl',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
+Configuration XML
+```xml
+<system-properties> 
+        <!-- Local FHIR Server Base URL -->
+        <property name="fhir.baseurl.dstu1" value="http://localhost:8080/baseDstu1"/>
+        <property name="fhir.baseurl.dstu2" value="http://localhost:8080/baseDstu2"/>
+        <property name="fhir.baseurl" value="http://localhost:8080"/>
+    </system-properties>
 ```
 
-Based on a HAPI Server
-----------------------
-Big thanks to HAPI Server and folks from UHN especially James. 
+
+Build & Deploy
+--------------
+Build the application using the following order of packages and then deploy the war. Always use clean and install Maven lifecycle. 
+
+1. HAPI-FHIR (root)
+2. HAPI FHIR TestPage Overlay
+3. FHIR Server - BlueButton 2.0 - Gaj
+
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/mavenLifecycle.png)
+	
+	http://localhost:8080/hapi-fhir-jpaserver/
 
 
+Thanks
+------
+Thanks to HAPI Team and UHN folks especially James Agnew. 
