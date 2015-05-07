@@ -13,11 +13,24 @@ Healthcare Interoperability using HL7's FHIR standards over HTTPS transport (RES
 
 WHAT
 ----
-HAPI based FHIR server with Blue Button 2.0 capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR.
+HAPI based FHIR server with Blue Button 2.0 capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR. Imagine this Blue Button functionality is implemented in every patient portal to free the data to patient and have them empower and take control of their health. Also provides dynamic API access to patient health info for 3rd party applications. 
+
+### Blue Button 2.0 capabilities => Download everything for a patient as a FHIR Bundle
+Download the healthcare data as FHIR JSON or FHIR XML format. 
+
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2Download.png)
+
 
 ### Blue Button 2.0 capabilities
-![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/rdbms.png)
+Untethered PHR and patient download and share the data with heatlhcare providers. 
 
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
+
+
+### PHR import and v
+Untethered PHR and patient download and share the data with heatlhcare providers. 
+
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
 DIRECTORY STRUCTURE
 -------------------
