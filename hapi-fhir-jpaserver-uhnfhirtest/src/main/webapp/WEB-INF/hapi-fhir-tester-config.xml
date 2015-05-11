@@ -12,7 +12,8 @@
 	<bean class="ca.uhn.fhir.to.TesterConfig">
 		<property name="servers">
 			<list>
-				<value>local     , DSTU1 , Local Gaj's Server (DSTU1 FHIR)             , http://localhost:8080/hapi-fhir-jpaserver/baseDstu1</value>
+				<value>local     , DSTU1 , Local Gaj's Server (DSTU1 FHIR)             , http://localhost:8080/fhir/baseDstu1</value>
+				<value>local     , DSTU2 , Local Gaj's Server (DSTU2 FHIR)             , http://localhost:8080/fhir/baseDstu2</value>
 				<value>home     , DSTU1 , UHN/HAPI Server (DSTU1 FHIR)                 , http://fhirtest.uhn.ca/baseDstu1</value>
 				<value>home_dev , DSTU2 , UHN/HAPI Server (DSTU2 FHIR)                 , http://fhirtest.uhn.ca/baseDstu2</value>
 				<value>home     , DSTU1 , UHN/HAPI Server (DSTU1 FHIR)                 , http://fhirtest.uhn.ca/baseDstu1</value>

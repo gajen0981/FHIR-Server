@@ -44,6 +44,19 @@
 									<li><a href="#" th:name="${requestUrl} + '/$everything?_format=xml'" id="getXml">FHIR XML</a></li>
 								</ul>
 							</div>
+
+							<div class="well" id="resultWell">
+								FHIR API - Patient Consent/Proxy Access to 3rd Parties
+								<a href="https://healthauth.org/login" target="_blank">UMA Profile Using OIDC/OAuth 2.0</a>
+							</div>
+
+							<div class="well" id="resultWell">
+								JSON:<br />
+								<a th:href="${requestUrl} + '/$everything?_format=json'" th:utext="${requestUrlText} + '/$everything?_format=json'"/>
+								<br /><br />
+								XML:<br />
+								<a th:href="${requestUrl} + '/$everything?_format=xml'" th:utext="${requestUrlText} + '/$everything?_format=xml'"/>
+							</div>
 						</div>
 
 						<p>&nbsp;</p>
