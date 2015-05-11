@@ -146,7 +146,7 @@ Build the application using the following order of packages and then deploy the 
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/mavenLifecycle.png)
 	
-	http://localhost:8080/hapi-fhir-jpaserver/
+	http://localhost:8080/fhir/
 
 
 Thanks
