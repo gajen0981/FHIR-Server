@@ -239,7 +239,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>hapi-fhir-jpaserver</finalName>
+		<finalName>fhir</finalName>
 	</build>
 
 </project>
