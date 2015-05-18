@@ -24,14 +24,28 @@ Untethered PHR and patient download and share the data with heatlhcare providers
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
-### Example Personal Healh Record Use Case
-Untethered Personal Health Repository - Patient imports FHIR files from multiple health systems.
-Rich Health Meaningful Info - With visually appealing mobile app, patients able to take control of their health and empower it. 
-Share and Proxy Access - Share the data with other heatlhcare providers and give and authorize 3rd party applications to get access to their data. 
-Donate for Research & Science - Donate the data for research & science (or Precision Medicine Initiates).
+### Example Personal Healh Record Use Case with my app
+Untethered Personal Health System Repository - Patient imports FHIR files from multiple health systems.
+Rich Meaningful Health Analytics - With visually appealing mobile app, patients able to take control of their health and empower it. 
+Share and Proxy Access - Share the data with other heatlhcare providers and give and authorize 3rd party applications to get access to the patient data. (Maybe able to use HEART/UMA profile)
+Donate for Research & Science - Donate the data for research & science (or Precision Medicine Initiates) or ResearchKit and other platforms. 
 
-End point app is in the early stages of developments. 
-![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR.png)
+End point app is in the early stages of developments and to maily to help patient harvest the data from this FHIR transformation/data access server to improve patient engagement & empowerment. 
+
+Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
+
+Dashboard to visualize your data 
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_2_Dashboard.png)
+
+myHealth API
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_3_API.png)
+
+myHealth Repo - Clinical File Systems (CFS)
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_4_Repo.png)
+
+myHealth Repo - Data Donation & Share 
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_5_Donation.png)
 
 DIRECTORY STRUCTURE
 -------------------
