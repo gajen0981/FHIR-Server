@@ -45,7 +45,7 @@ myHealth Repo - Clinical File Systems (CFS)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_4_Repo.png)
 
 myHealth Repo - Data Donation & Share 
-![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_5_Donation.png)
+![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_5_Donate.png)
 
 DIRECTORY STRUCTURE
 -------------------
