@@ -24,14 +24,15 @@ Untethered PHR and patient download and share the data with heatlhcare providers
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
-### Example Personal Healh Record Use Case with my app
-Untethered Personal Health System Repository - Patient imports FHIR files from multiple health systems.
-Rich Meaningful Health Analytics - With visually appealing mobile app, patients able to take control of their health and empower it. 
+### Use case around Patient centered Personal Healh Record (PHR) that can enagage and empower patient
+Untethered PHR that can engage the patient and empower it. 
 
-- Share and Proxy Access:Share the data with other heatlhcare providers and give and authorize 3rd party applications to get access to the patient data. (Maybe able to use HEART/UMA profile)
+- Patient Generated Heatlh Data (PGHD): Apple Health, FitBit or any sensors
+- Repository of EHR data, Genomics, PGHD
+- Patient controlled API for inbound and outbound communitications.  
 - Donate for Research & Science: Donate the data for research & science (or Precision Medicine Initiates) or ResearchKit and other platforms. 
 
-End point app is in the early stages of developments and to maily to help patient harvest the data from this FHIR transformation/data access server to improve patient engagement & empowerment. 
+End point app is in the early stages of developments and it maily focused around patient mediated, engagement & empowerment for better heatlh outcomes. 
 
 Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
