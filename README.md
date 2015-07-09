@@ -37,6 +37,7 @@ Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
 
 Personal Health Record to engage and empower patient health and improve health outcomes. 
+Dashboard shows PGHD, Genomics, EHR and other mHealth data. Widgets can be customized!
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_2_Dashboard.png)
 
 myHealth API - Patient inbound & outbound API 
