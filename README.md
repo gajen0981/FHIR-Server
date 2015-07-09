@@ -37,21 +37,21 @@ End point app is in the early stages of developments and it maily focused around
 Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
 
-Personal Health Record for collect, share health data, improve health outcome and empower patients. 
+Personal Health Record to engage and empower patient health and improve health outcomes. 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_2_Dashboard.png)
 
 myHealth API
-Get FHIR end point URL from your health systems or patient portals FHIR service. 
+Patient inbound and outbound API 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_3_API.png)
 
 myHealth Repo - Clinical File Systems (CFS)
-Collect your health record from any health systems in FHIR format
+Collect clinical, PGHD, Genomics data.
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_4_Repo.png)
 
 myHealth Repo - Share & Donate your data
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_5_Donate.png)
 
-myHealth Wearables - Connect to healt wearables devices
+myHealth Wearables - Connect to health wearables devices
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_6_HealthWearables.png)
 
 
