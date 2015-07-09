@@ -1,38 +1,37 @@
 
 # FHIR-Server
 =============
-This is the HAPI based FHIR server with Blue Button 2.0 capabilities that is tuned for enterprise scalability with RDBMS with JBoss Application Server. This technology stack on JavaEE with SpringMVC. 
+This is the HAPI based FHIR server with Blue Button capabilities that is fine tuned for enterprise scalability in mind for any RDBMS and JBoss Application Server. This technology stack is developed using industry standards technology including JavaEE with SpringMVC frameworks. 
 
 Documentation is still in progress and it's in DRAFT format.
 
 WHY
 ---
-Healthcare Interoperability using HL7's FHIR standards over HTTPS transport (RESTful API).
+Healthcare Interoperability using HL7's open FHIR standards over HTTPS transport (RESTful API).
 
 
 WHAT
 ----
-HAPI based FHIR server with Blue Button 2.0 capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR. Imagine this Blue Button functionality is implemented in every patient portal to free the data to patient and have them empower and take control of their health. Also provides dynamic API access to patient health info for 3rd party applications. 
+HAPI based FHIR server with Blue Button capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR (Business 2 Consumer) or provider to provider health inetroperability (Business 2 Business).  Imagine this Blue Button functionality is implemented in every patient portal to free the data to their patients and have them empower and take control of their health that can improve health outcome and reduce healthcare cost. 
 
-### Blue Button 2.0 capabilities => Download everything for a patient as a FHIR Bundle
+### Blue Button apabilities including patients able to download everything as a FHIR Bundle
 Download the healthcare data as FHIR JSON or FHIR XML format. 
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2Download.png)
 
-### Blue Button 2.0 capabilities
-Untethered PHR and patient download and share the data with heatlhcare providers. 
+### Blue Button capabilities
+Untethered PHR, patient can download/access/share the data with providers & researchers. 
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
-### Use case around Patient centered Personal Healh Record (PHR) that can enagage and empower patient
-Untethered PHR that can engage the patient and empower it. 
+### Use case around Patient centered Personal Healh Record (PHR) that can enagage and empower patient that can improve health outcome and reduce healthcare cost. 
 
-- Patient Generated Heatlh Data (PGHD): Apple Health, FitBit or any sensors
-- Repository of EHR data, Genomics, PGHD
-- Patient controlled API for inbound and outbound communitications.  
-- Donate for Research & Science: Donate the data for research & science (or Precision Medicine Initiates) or ResearchKit and other platforms. 
+- Patient Generated Heatlh Data (PGHD): Apple Health, FitBit or any health wearables 
+- Repository of EHR, Genomics, PGHD or mHealth data. 
+- Patient controlled API for inbound and outbound transactions.  
+- Donate the data for research & science including Precision Medicine Initiates, ResearchKit, GitHub and other platforms.
 
-End point app is in the early stages of developments and it maily focused around patient mediated, engagement & empowerment for better heatlh outcomes. 
+End point app is in early stages of developments and it maily focused around patient mediated, engagement & empowerment for better heatlh outcomes. 
 
 Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
