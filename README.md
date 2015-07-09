@@ -39,8 +39,7 @@ Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 Personal Health Record to engage and empower patient health and improve health outcomes. 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_2_Dashboard.png)
 
-myHealth API
-Patient inbound and outbound API 
+myHealth API - Patient inbound & outbound API 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_3_API.png)
 
 myHealth Repo - Clinical File Systems (CFS)
