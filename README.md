@@ -1,7 +1,7 @@
 
 # FHIR-Server
 =============
-This is the HAPI based FHIR server with Blue Button capabilities that is fine tuned for enterprise scalability in mind for any RDBMS and JBoss Application Server. This technology stack is developed using industry standards technology including JavaEE with SpringMVC frameworks. 
+FHIR server with Blue Button capabilities that is fine tuned for enterprise scalability in mind for any RDBMS with JBoss Application Server. This technology stack is developed using industry standards technology including JavaEE with SpringMVC frameworks on top of HAPI server. 
 
 Documentation is still in progress and it's in DRAFT format.
 
@@ -24,7 +24,7 @@ Untethered PHR, patient can download/access/share the data with providers & rese
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2DownloadedFiles.png)
 
-### Use case around Patient centered Personal Healh Record (PHR) that can enagage and empower patient that can improve health outcome and reduce healthcare cost. 
+### Use case around Patient centered Personal Healh Record (PHR) and care coordination that can enagage and empower patient to improve health outcome and reduce healthcare cost. 
 
 - Patient Generated Heatlh Data (PGHD): Apple Health, FitBit or any health wearables 
 - Repository of EHR, Genomics, PGHD or mHealth data. 
