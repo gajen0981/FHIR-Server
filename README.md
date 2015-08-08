@@ -1,7 +1,7 @@
 
 # FHIR-Server
 =============
-FHIR server with Blue Button capabilities that is fine tuned for enterprise scalability in mind for any RDBMS with JBoss Application Server. This technology stack is developed using industry standards technology including JavaEE with SpringMVC frameworks on top of HAPI server. 
+FHIR server with Blue Button capabilities that is fine tuned for enterprise scalability. This technology stack is developed using industry standards enterprise technology including JavaEE with SpringMVC frameworks, RDBMS on top of HAPI server. 
 
 Documentation is still in progress and it's in DRAFT format.
 
@@ -12,9 +12,9 @@ Healthcare Interoperability using HL7's open FHIR standards over HTTPS transport
 
 WHAT
 ----
-HAPI based FHIR server with Blue Button capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR (Business 2 Consumer) or provider to provider health inetroperability (Business 2 Business).  Imagine this Blue Button functionality is implemented in every patient portal to free the data to their patients and have them empower and take control of their health that can improve health outcome and reduce healthcare cost. 
+HAPI based FHIR server with Blue Button capabilities. Able to download the files in FHIR JSON or FHIR XML for untethered PHR (Business 2 Consumer) or provider to provider health inetroperability (Business 2 Business).  Imagine this Blue Button functionality is implemented in every patient portal to free the data to their patients to engage and empower to improve health outcomes and lower the healthcare cost. 
 
-### Blue Button apabilities including patients able to download everything as a FHIR Bundle
+### Blue Button capabilities including patients able to download everything as a bundle
 Download the healthcare data as FHIR JSON or FHIR XML format. 
 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/BB2Download.png)
@@ -36,18 +36,17 @@ End point app is in early stages of developments and it maily focused around pat
 Login using OpenID Connect & OAuth 2.0 and Single Sign On (SSO)
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_1_Login.png)
 
-Personal Health Record to engage and empower patient health and improve health outcomes. 
-Dashboard shows PGHD, Genomics, EHR and other mHealth data. Widgets can be customized!
+Personal Health Record / Care Coordination to engage and empower patient health and improve health outcomes. 
+Dashboard shows PGHD, Genomics, EHR and other mHealth data. Widgets/apps can be customized
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_2_Dashboard.png)
 
-myHealth API - Patient inbound & outbound API 
+myHealth Exchange - Patient incoming & outgoing data as API 
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_3_API.png)
 
-myHealth Repo - Clinical File Systems (CFS)
-Collect clinical, PGHD, Genomics data.
+myHealth Store & Share
+Collect clinical, PGHD, Genomics and other environmental data and share or donate
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_4_Repo.png)
 
-myHealth Repo - Share & Donate your data
 ![alt tag](https://github.com/gajen0981/FHIR-Server/blob/master/screenshots/PHR_5_Donate.png)
 
 myHealth Wearables - Connect to health wearables devices
