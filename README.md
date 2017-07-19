@@ -1,3 +1,5 @@
+[July 2017 Update] - This project is nolonger maintained and please use the one of the open FHIR server implementaions such as HAPI. MyHealth is now implemented at https://1upHealth.care
+
 
 # FHIR-Server
 =============
